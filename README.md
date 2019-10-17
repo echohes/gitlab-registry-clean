@@ -12,11 +12,11 @@ Easy bash script to clean all project from gitlab-registry
 # Run script:
     gitlab-registry-clean.sh ${TOKEN} ${URL PROJECT} ${Save the last N records}
 
-# Example:
-# Clear registry  in  gitlab.example.com and saved last 10 records:
+# Example. Clear registry  in  gitlab.example.com and saved last 10 records:
     gitlab-registry-clean.sh sdflkj1l-Vd-VklkdaFf gitlab.example.com 10
-
-
+    
+# After cleaning need to run the garbage collector:
+    gitlab-ctl registry-garbage-collect -m
 
 # You can get a token according to the instructions in the official documentation:
-# https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html 
+    https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html 
